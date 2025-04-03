@@ -13,4 +13,10 @@ app.get("/platform", (c) => {
 });
 serve(app);
 
+app.get("/generate", async (C) => {
+  const num = Math.floor(Math.random() * 100);
+
+  return C.json({ num });
+});
+
 console.log("Server is running on http://localhost:3000");
